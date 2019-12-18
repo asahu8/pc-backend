@@ -1,6 +1,6 @@
 class ChallengesController < ApplicationController
   def list
-    enrollmentFlag = true
+    enrollmentFlag = false
     render json: ({
     "programGuid": "34000000-0000-0000-0000-000000000000",
     "frequency": "MONTHLY",
@@ -81,7 +81,7 @@ class ChallengesController < ApplicationController
     "activateRemindersDescription": "here is desc",
     "backgroundImageUrl": "background_image_url",
     "guidelinesTitle": "Become Better",
-    "guidelinesSubTitle": "Duration Guildline",
+    "guidelinesSubTitle": "MY WEEKLY PLAN",
     "guidelinesDescription": "We recommend starting small and gradually increasing your time week by week. But of caurse, do what feels right.",
     "anchorTitle": "Write your statement",
     "anchorDescription": "Creating a promise statement is the secret to anchoring a new habit. This statement will include your habit and an \"Anchor\".",
