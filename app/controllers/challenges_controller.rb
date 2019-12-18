@@ -90,7 +90,7 @@ class ChallengesController < ApplicationController
     "anchorExampleHeader": "What is an `Anchor`?",
     "anchorExampleSubHeader": "Examples:",
     "anchorExampleDescription": "An Anchor is an existing behavior that you already do consistently every day, like riding the train. When you create a statement that includes your anchor, you will be reminded to practice your habit every time you perform your anchor!",
-    "anchorExampleTemplate": "When I {{wake up}}, I will practice deep breathing.",
+    "anchorExampleTemplate": "When I {{wake up}}I will practice deep breathing.",
     "remindersTitle": "Set reminder",
     "remindersDescription": "Get a helpful nudge when it's time to practice your new habit.",
     "activateRemindersImageUrl": "activate_reminders_image_url"
