@@ -1,122 +1,124 @@
 class ChallengesController < ApplicationController
-  def list
+
+  def specific_pc
     enrollmentFlag = false
-    render json: ({
-    "programGuid": "34000000-0000-0000-0000-000000000000",
-    "frequency": "MONTHLY",
-    "name": "Breathe",
-    "subTitle": "Earn 5 points daily",
-    "week": "Week 1",
-    "description": "Take deep breaths to reduce your stress and promote healing! When you breathe, you tell your body to calm down and relax.",
-    "iconUrl": "https://chopra.com/sites/default/files/field/image/meditating-in-nature.jpg",
-    "headerImageUrl": "/assets/img/personal-challenges/breathe_img.svg",
-    "enrolledToChallenge": enrollmentFlag,
-
-    "enrollmentStartDate": Date.today - 7,
-    "enrollmentEndDate": Date.today,
-    "week": "Week 1",
-    "iconUrl": "",
-    "challengeIcon": "assets/img/personal-challenges/breathing.svg",
-    "backgroundImageUrl": "https://chopra.com/sites/default/files/field/image/meditating-in-nature.jpg",
-    "progress": [{
-      "date": Date.today - 6,
-      "dataType": 'skip'
-    },
-    {
-      "date": Date.today - 5,
-      "dataType": ''
-    },
-    {
-      "date": Date.today - 4 ,
-      "dataType": 'skip'
-    },
-    {
-      "date": Date.today - 3,
-      "dataType": 'done'
-    },
-    {
-      "date": Date.today - 2,
-      "dataType": 'skip'
-    },
-    {
-      "date": Date.today - 1,
-      "dataType": 'done'
-    },
-    {
-      "date": Date.today,
-      "dataType": ''
-    }
-    ],
-    "anchorTemplates": [
+    sleep(3000)
+    render json: (
       {
-        "templateText": "{When I} get ready for bed, {I will} practice deep breathing."
-      },
-      {
-        "templateText": "{When I} finish my breakfast, {I will} practice deep breathing."
-      },
-      {
-        "templateText": "{When I} ride the train, {I will} practice deep breathing."
+        "pcInstanceGuid": "19f0ae4b-cb38-449a-a5e7-822f1342ce36",
+        "habitLabel": "form your habit",
+        "habitContent": "Practice deep breathing daily, week by week, until you reach your goal. Keep it up until it sticks!",
+        "description": "Take deep breaths to reduce your stress and promote healing!",
+        "name": "Breathe",
+        "duration": "WEEKLY",
+        "subTitle": "Earn 0 points daily",
+        "streakDescription": "Week 1",
+        "category": {
+          "name": "RELAX"
+        },
+        "dailyActivityImageUrl": "https://res.cloudinary.com/castlight-health-dev/image/upload/v1583410767/personal_challenges/breathe/daily_activities.svg",
+        "iconUrl": "https://res.cloudinary.com/castlight-health-dev/image/upload/v1582542190/personal_challenges/breathe/icon.svg",
+        "backgroundImageUrl": "https://res.cloudinary.com/castlight-health-dev/image/upload/v1583300247/personal_challenges/breathe/background.svg",
+        "catalogueActiveImageUrl": " https://res.cloudinary.com/castlight-health-dev/image/upload/v1583470135/personal_challenges/breathe/catalogue_active.svg",
+        "catalogueInactiveImageUrl": "https://res.cloudinary.com/castlight-health-dev/image/upload/v1583149264/personal_challenges/breathe/catalogue_inactive.svg",
+        "onBoardingImageUrl": "https://res.cloudinary.com/castlight-health-dev/image/upload/v1584955405/personal_challenges/breathe/onboarding.svg",
+        "progressImageUrl": "https://res.cloudinary.com/castlight-health-dev/image/upload/v1585042473/personal_challenges/breathe/progress.svg",
+        "challengeRenewText": "Make this habit really stick. It usually takes 6-10 weeks to create a habbit. The more rounds of Breathe you do, the easier it will become.",
+        "guidelinesTitle": "Set Goals",
+        "guidelinesSubTitle": "SUGGESTED GOALS",
+        "guidelinesDescription": "Take small steps to grow your habit into a meditation practice. Or, keep your goals small and still benefit from taking deep breaths.",
+        "anchorTemplate": "When I {phrase}I will practice deep breathing.",
+        "anchorPlaceholder": "wake up",
+        "guidelines": [],
+        "anchorExampleTemplates": [ {
+          "id": "de465cb5-2f23-4156-8041-4f8fa575fb62",
+          "createdDate": "2020-04-10T06:30:15.000+0000",
+          "modifiedDate": "2020-04-10T06:30:15.000+0000",
+          "exampleText": "<strong>When I</strong> finish my breakfast, <strong>I will</strong> practice deep breathing.",
+          "deleted": false
+        }, {
+          "id": "3cf1e8a2-c7fd-42b8-a75d-66b13b79f96b",
+          "createdDate": "2020-04-10T06:30:15.000+0000",
+          "modifiedDate": "2020-04-10T06:30:15.000+0000",
+          "exampleText": "<strong>When I</strong> buckle my seatbelt, <strong>I will</strong> practice deep breathing.",
+          "deleted": false
+        }, {
+          "id": "16534e8f-7042-40c6-a4ae-cd161653779c",
+          "createdDate": "2020-04-10T06:30:15.000+0000",
+          "modifiedDate": "2020-04-10T06:30:15.000+0000",
+          "exampleText": "<strong>When I</strong> get ready for bed, <strong>I will</strong> practice deep breathing.",
+          "deleted": false
+        }, {
+          "id": "437c1104-6c24-41a2-87b6-85df9f3faf4f",
+          "createdDate": "2020-04-10T06:30:15.000+0000",
+          "modifiedDate": "2020-04-10T06:30:15.000+0000",
+          "exampleText": "<strong>When I</strong> ride the train, <strong>I will</strong> practice deep breathing.",
+          "deleted": false
+        } ],
+        "incentivePoints": 0,
+        "userEnrolledToPc": false,
+        "streakCount": 1,
+        "pcRenewable": false,
+        "pcRenewableDays": 0,
+        "pcCatalogueCard": false
       }
-    ],
+    )
+    end
 
-    "pcUiContentInfo": {
-=begin
-    "activateRemindersTitle": "WEEKLY",
-    "activateRemindersDescription": "here is desc",
-    "backgroundImageUrl": "background_image_url",
-    "guidelinesTitle": "Make a Plan",
-    "guidelinesSubTitle": "MY WEEKLY PLAN",
-    "guidelinesDescription": "We recommend starting small and gradually increasing your time week by week. But of caurse, do what feels right.",
-    "anchorTitle": "anchor_title",
-    "anchorDescription": "anchor_description",
-    "anchorImageUrl": "anchor_image_url",
-    "remindersTitle": "reminders_title",
-    "remindersDescription": "reminders_description",
-    "activateRemindersImageUrl": "activate_reminders_image_url"
-=end
-    "name": "Breathe Challenge",
-    "headerImageUrl": "https://chopra.com/sites/default/files/field/image/meditating-in-nature.jpg",
-    "iconUrl": "assets/img/personal-challenges/breathing.svg",
-    "activateRemindersTitle": "WEEKLY",
-    "activateRemindersDescription": "here is desc",
-    "backgroundImageUrl": "background_image_url",
-    "guidelinesTitle": "Become Better",
-    "guidelinesSubTitle": "MY WEEKLY PLAN",
-    "guidelinesDescription": "We recommend starting small and gradually increasing your time week by week. But of caurse, do what feels right.",
-    "anchorTitle": "Write your statement",
-    "anchorDescription": "Creating a promise statement is the secret to anchoring a new habit. This statement will include your habit and an \"Anchor\".",
-    "anchorImageUrl": "assets/img/personal-challenges/tape.svg",
-    "anchorExampleLink": "What is an Anchor? See examples.",
-    "anchorExampleHeader": "What is an `Anchor`?",
-    "anchorExampleSubHeader": "Examples:",
-    "anchorExampleDescription": "An Anchor is an existing behavior that you already do consistently every day, like riding the train. When you create a statement that includes your anchor, you will be reminded to practice your habit every time you perform your anchor!",
-    "anchorExampleTemplate": "When I {{ride the train}}I will practice deep breathing.",
-    "remindersTitle": "Set reminder",
-    "remindersDescription": "Get a helpful nudge when it's time to practice your new habit.",
-    "activateRemindersImageUrl": "activate_reminders_image_url"
-    },
-    "guidelines": [
-      {
-        "name": "Week 1",
-        "description": "3 breaths"
-      },
-    {
-    "name": "Week 2",
-    "description": "5 breaths"
-    },
-    {
-    "name": "Week 3 & 4",
-    "description": "2 minutes"
-    },
-    {
-    "name": "Week 5 & 6",
-    "description": "3 minutes"
-    },
-    {
-    "name": "Week 7 & 8",
-    "description": "5 minutes"
-    }
-    ]
-    })
-  end
+    def get_instance
+      obj = {
+        "id": "0b0e4e0b-c492-4611-953a-0477ad8d9f1b",
+          "startDate": "2020-01-01",
+          "endDate": "2022-01-01",
+          "personalChallenge": {
+              "id": "f2358441-8d76-46bf-9729-1833d0b69141"
+          },
+          "mappedSegments": [
+              {
+                  "id": "a0ddb806-e43c-4f93-b90e-c411db9394cc",
+                  "employerKey": "abbott",
+                  "eligibility": "{employerKey: abbott, normalizedRelationship: [SELF]}"
+              }
+          ],
+          "employerKey": "castlight"
+      }
+      render json: obj
+    end
+
+    def instances
+      instance = {
+        "id": "679d335b-0c6c-4e87-b100-176fd57e1c9a",
+        "personalChallenge": {
+          "id": "fcec041b-1003-4616-b907-619d0e257d1e",
+          "name": "Breathe",
+          "category": {
+            "name": "RELAX"
+          }
+        },
+        "startDate": "2020-01-10",
+        "endDate": "2020-05-20",
+        "employerKey": "castlight",
+        "modified_by": "alex",
+        "modified_date":  "Mon Mar 30 07:36:38 IST 2020"
+      }
+
+      habits = ['Drink Water', 'Breathe', 'Make Coffee', 'Read book', 'Meditate', 'Eat Veggies', 'Sleep early', 'Exercise', 'Jogging', 'Eat fruits', 'Feel Grateful', 'stretch', 'Connect', 'Feel Grateful' ]
+      categories = %w(health relax foodHabit knowledge mindful knowledge)
+      instances = []
+     20.times do
+      newHabit =
+      newInstance = instance.merge({
+        "personalChallenge": {
+          "id" => "fcec041b-1003-4616-b907-619d0e257d1e",
+          "name" => habits.sample,
+          "category" => {
+            "name" => categories.sample
+          }
+        },
+        "endDate" => ( Date.new(2020, 3, 1) + (1..90).to_a.sample).to_s
+      })
+      instances.push(newInstance)
+      end
+      render json: ( instances )
+    end
 end
