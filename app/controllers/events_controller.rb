@@ -13,8 +13,3 @@ class EventsController < ApplicationController
     );
   end
 end
-
-
-# { "name" : "Summer Camp-909", "date" : "2020-02-08", "createdBy" : "mmuray", "commentsCount" : 20 },
-# { "name" : "Books to Orphan age", "date" : "2020-03-03", "createdBy" : "alexn", "commentsCount" : 8 },
-# { "name" : "Mountain Biking	", "date" : "2020-05-05", "createdBy" : "rberger", "commentsCount" : 7 }
