@@ -12,4 +12,17 @@ class EventsController < ApplicationController
     }
     );
   end
+
+  def event_cards
+    render json: (
+      {
+        status: 200,
+        data: [
+          { cardType: "past", cardName: "past events", eventCount: 5 },
+          { cardType: "future", cardName: "future events", eventCount: 15 }
+
+        ]
+      }
+    )
+  end
 end
