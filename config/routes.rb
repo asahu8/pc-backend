@@ -14,6 +14,10 @@ get 'personal-challenges/admin/config/instance/1234' => 'challenges#get_instance
   post '/user-activity' => 'challenges#user_activity'
   get '/enrollment/eligible' => 'challenges#is_eligible'
 
-  get '/events' => 'events#index'
+  # get '/events' => 'events#index'
   get '/event-cards' => 'events#event_cards';
+  resources :events, only: [:create, :update, :index]
+   # //collection :do
+    #end
+
 end
